@@ -1,7 +1,7 @@
 {
-	"name": "chrome-extension-typescript-tailwindcss",
+	"name": "github-bookmark",
 	"version": "0.0.0",
-	"description": "Spike to create a Google Chrome extension that is developed in TypeScript + TailwindCSS",
+	"description": "A micro browser extension that saves a web page URL as a GitHub issue",
 	"main": "dist/index.js",
 	"module": "dist/index.cjs",
 	"types": "dist/index.d.ts",
@@ -17,7 +17,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/freitzzz/chrome-extension-typescript-tailwindcss.git"
+		"url": "git+https://github.com/freitzzz/github-bookmark.git"
 	},
 	"keywords": [
 		"typescript",
@@ -33,9 +33,9 @@
 	"author": "freitzzz",
 	"license": "none",
 	"bugs": {
-		"url": "https://github.com/freitzzz/chrome-extension-typescript-tailwindcss/issues"
+		"url": "https://github.com/freitzzz/github-bookmark/issues"
 	},
-	"homepage": "https://github.com/freitzzz/chrome-extension-typescript-tailwindcss#readme",
+	"homepage": "https://github.com/freitzzz/github-bookmark#readme",
 	"devDependencies": {
 		"@freitzzz/gh-pagez": "^5.0.1",
 		"@jest/globals": "^29.5.0",

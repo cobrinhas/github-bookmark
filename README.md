@@ -1,12 +1,6 @@
-# chrome-extension-typescript-tailwindcss
+# github-bookmark
 
-Spike to create a Google Chrome extension that is developed in TypeScript + TailwindCSS
-
-## How did I achieve it?
-
-TypeScript support enabled using [chrome-extensions-typescript](https://github.com/freitas-labs/chrome-extension-typescript) spike. TailwindCSS configured using [official installation doc](https://tailwindcss.com/docs/installation).
-
-![tailwind](tailwind.png)
+A micro browser extension that saves a web page URL as a GitHub issue
 
 ## Scripts
 
