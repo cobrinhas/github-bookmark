@@ -1,11 +1,69 @@
-<html>
+<html class="w-96">
+	<head>
+		<link href="index.css" rel="stylesheet" />
+	</head>
 
-<head>
-    <link href="index.css" rel="stylesheet">
-</head>
+	<body>
+		<div class="mx-auto flex w-full max-w-sm flex-col gap-6 p-6">
+			<div class="flex flex-col items-center">
+				<h1 class="text-3xl font-semibold">GitHub Bookmark</h1>
+				<p class="text-sm text-center">
+					You're one click away of bookmarking this website as an issue in your
+					repo!
+				</p>
+			</div>
+			<div class="form-group">
+				<div class="form-field">
+					<label class="form-label">Website URL</label>
 
-<body>
-    <script src="index.js"></script>
-</body>
+					<input
+						id="website-url"
+						placeholder="Loading..."
+						type="url"
+						class="input max-w-full"
+						disabled
+					/>
+				</div>
+				<div class="form-field">
+					<label class="form-label">Title</label>
 
+					<input
+						id="website-title"
+						placeholder="Loading..."
+						type="text"
+						class="input input-ghost-primary max-w-full"
+					/>
+				</div>
+
+				<div class="divider divider-horizontal">GitHub Settings</div>
+
+				<div class="form-field">
+					<label class="form-label">Repo URL</label>
+
+					<input
+						id="github-repo-url"
+						placeholder="https://github.com/<username>/<repo>"
+						type="url"
+						class="input input-ghost-primary max-w-full"
+					/>
+				</div>
+				<div class="form-field">
+					<label class="form-label">API Token</label>
+
+					<input
+						id="github-api-token"
+						type="password"
+						class="input input-ghost-primary max-w-full"
+					/>
+				</div>
+				<div class="form-field pt-5">
+					<div class="form-control justify-between">
+						<button type="button" class="btn btn-primary w-full">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="index.js"></script>
+	</body>
 </html>
