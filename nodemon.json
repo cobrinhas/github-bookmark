@@ -1,7 +1,5 @@
 {
-	"watch": [
-		"src"
-	],
+	"watch": ["src"],
 	"ext": ".ts,.js,.html,.json",
 	"ignore": [],
 	"exec": "npm run build"

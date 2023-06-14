@@ -17,18 +17,10 @@
 		/* Completeness */
 		"skipLibCheck": true /* Skip type checking all .d.ts files. */
 	},
-	"include": [
-		"src/**/*"
-	],
+	"include": ["src/**/*"],
 	"typedocOptions": {
-		"entryPoints": [
-			"src/index.ts"
-		],
+		"entryPoints": ["src/index.ts"],
 		"out": "docs"
 	},
-	"exclude": [
-		"node_modules",
-		"dist/**/*",
-		"coverage/**/*"
-	]
+	"exclude": ["node_modules", "dist/**/*", "coverage/**/*"]
 }

@@ -1,4 +1,4 @@
-const { readFileSync, writeFileSync } = require("fs");
+const { readFileSync, writeFileSync } = require('fs');
 
 const manifestFilePath = './dist/manifest.json';
 
