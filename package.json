@@ -39,6 +39,7 @@
 	"devDependencies": {
 		"@freitzzz/gh-pagez": "^5.0.1",
 		"@jest/globals": "^29.5.0",
+		"@types/chrome": "^0.0.237",
 		"@types/node": "^18.15.11",
 		"@typescript-eslint/eslint-plugin": "^5.58.0",
 		"@typescript-eslint/parser": "^5.58.0",
@@ -54,5 +55,8 @@
 		"tsup": "^6.7.0",
 		"typedoc": "^0.24.6",
 		"typescript": "^5.0.4"
+	},
+	"dependencies": {
+		"rippleui": "^1.12.1"
 	}
 }
