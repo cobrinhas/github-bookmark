@@ -1,14 +1,15 @@
 {
-    "$schema": "https://json.schemastore.org/chrome-manifest.json",
-    "name": "GitHub Bookmark",
-    "description": "A micro browser extension that saves a web page URL as a GitHub issue",
-    "version": "1.0",
-    "manifest_version": 3,
-    "action": {
-        "default_popup": "index.html",
-        "default_icon": {
-            "48": "icon_48x48.gif"
-        },
-        "default_title": "GitHub Bookmark"
-    }
+	"$schema": "https://json.schemastore.org/chrome-manifest.json",
+	"name": "GitHub Bookmark",
+	"description": "A micro browser extension that saves a web page URL as a GitHub issue",
+	"version": "1.0",
+	"manifest_version": 3,
+	"action": {
+		"default_popup": "index.html",
+		"default_icon": {
+			"48": "icon_48x48.gif"
+		},
+		"default_title": "GitHub Bookmark"
+	},
+	"permissions": ["tabs", "storage"]
 }
