@@ -7,9 +7,15 @@
 	"action": {
 		"default_popup": "index.html",
 		"default_icon": {
-			"48": "icon_48x48.gif"
+			"16": "16x16.png",
+			"32": "32x32.png",
+			"48": "48x48.png",
+			"128": "128x128.png"
 		},
 		"default_title": "GitHub Bookmark"
 	},
-	"permissions": ["tabs", "storage"]
+	"permissions": [
+		"tabs",
+		"storage"
+	]
 }
