@@ -7,5 +7,6 @@ ignore
 !.env.example
 
 package-lock.json
+tailwind.config.js
 docs
 bin
