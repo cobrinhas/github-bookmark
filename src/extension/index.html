@@ -4,7 +4,7 @@
 	<link href="index.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="background">
 	<div class="mx-auto flex w-full max-w-sm flex-col gap-6 p-6">
 		<div class="flex flex-col items-center">
 			<h1 class="text-3xl font-semibold">GitHub Bookmark</h1>
@@ -40,9 +40,11 @@
 				<input id="github-api-token" type="password" class="input input-ghost-primary max-w-full" />
 			</div>
 
-			<div id="form-status" class="hidden form-field pt-5">
-				<div class="form-control justify-between">
-					<p id="status" class="text-sm text-center">
+			<div class="form-field">
+				<div id="form-status" class="hidden form-control justify-center pt-5">
+					<div id="spinner" class="hidden spinner-circle"></div>
+					<p id="status" class="hidden text-sm text-center"></p>
+					<a id="issueUrl" class="hidden link link-success" target="_blank"></a>
 				</div>
 			</div>
 
