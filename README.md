@@ -8,7 +8,7 @@ Everyday I share an article I've read in my [blog](https://joaomagfreitas.link/r
 
 ## How does it looks like?
 
-https://github.com/cobrinhas/github-bookmark/assets/26190214/3b2df06a-f7d6-45d1-82fb-e14d3adeaef1
+https://github.com/cobrinhas/github-bookmark/assets/26190214/da284333-3ea6-4ee5-8903-1eed3d4ef400
 
 ## How do I install it?
 
