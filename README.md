@@ -1,6 +1,23 @@
-# github-bookmark
+# github-bookmark 📖
 
 A micro browser extension that saves a web page URL as a GitHub issue
+
+## Why?
+
+Everyday I share an article I've read in my [blog](https://joaomagfreitas.link/reads). Usually I bookmark articles to read in the next few days, but I rarely access my bookmark folder to revisit them 🤷 My solution for this problem is to post the articles I certainly know I want to read, as an issue in my blog GitHub repository. This extension helps me automate the process of creating the issue, by mimicking the process of bookmarking a page in the browser.
+
+## How does it looks like?
+
+https://github.com/cobrinhas/github-bookmark/assets/26190214/3b2df06a-f7d6-45d1-82fb-e14d3adeaef1
+
+## How do I install it?
+
+1. Clone this repo
+2. Install dependencies (`npm i`)
+3. Build the extension (`npm run build`)
+4. Import the extension (Chrome > Navigate to extensions `chrome://extensions/` > Load Unpacked > Select `dist` folder available in the repo)
+
+---
 
 ## Scripts
 
@@ -19,14 +36,3 @@ This repository is configured with client-side Git hooks that automatically form
 ```bash
 ./hooks/INSTALL
 ```
-
----
-
-### Contact
-
-This template was prepared by:
-
-- João Freitas, @freitzzz
-- Rute Santos, @rutesantos4
-
-Contact us for freelancing work!
