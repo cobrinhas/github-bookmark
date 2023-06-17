@@ -160,7 +160,7 @@ export function save() {
 		})
 			.then((result) => {
 				if (result.ok) {
-					result.json().then((json) => setIssueUrl(json.html_url))
+					result.json().then((json) => setIssueUrl(json.html_url));
 				} else {
 					const statusType: StatusType = 'error';
 					let message: string;
@@ -180,12 +180,12 @@ export function save() {
 					}
 
 					setStatusMessage(`${message} (${result.status}) `, statusType);
-
 				}
 			})
 			.catch((err) => {
 				setStatusMessage(err, 'error');
-			}).finally(hideSpinner);
+			})
+			.finally(hideSpinner);
 	}
 }
 
@@ -206,7 +206,10 @@ function loadInMemoryStorage() {
 	return get;
 }
 
-function setStatusMessage(message: string | undefined, type: StatusType = 'info') {
+function setStatusMessage(
+	message: string | undefined,
+	type: StatusType = 'info'
+) {
 	const formStatusDiv = document.getElementById('form-status');
 	const statusP = document.getElementById('status');
 
@@ -237,7 +240,6 @@ function setStatusMessage(message: string | undefined, type: StatusType = 'info'
 			statusP.classList.add(statusTypeCSSClass);
 		}
 	}
-
 }
 
 function setIssueUrl(url: string) {
