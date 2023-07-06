@@ -12,6 +12,12 @@ https://github.com/cobrinhas/github-bookmark/assets/26190214/da284333-3ea6-4ee5-
 
 ## How do I install it?
 
+1. Download the latest release
+2. Unzip `dist.zip` to a new folder
+3. Import the extension (Chrome > Navigate to extensions `chrome://extensions/` > Load Unpacked > Select `dist` folder available in the repo)
+
+Or...
+
 1. Clone this repo
 2. Install dependencies (`npm i`)
 3. Build the extension (`npm run build`)
