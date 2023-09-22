@@ -2,7 +2,11 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,ts}'],
 	theme: {
-		extend: {}
+		extend: {
+			colors: {
+				bkg: 'hsl(var(--color-bkg) / <alpha-value>)'
+			}
+		}
 	},
 	plugins: [require('rippleui')]
 };
