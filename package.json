@@ -13,7 +13,9 @@
 		"docs": "typedoc",
 		"docs:publish": "typedoc && gh-pagez -d docs -t true",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"release": "changeset",
+		"publish": "npm run build && ./scripts/release.sh"
 	},
 	"repository": {
 		"type": "git",
@@ -57,6 +59,7 @@
 		"typescript": "^5.0.4"
 	},
 	"dependencies": {
+		"@changesets/cli": "^2.26.2",
 		"rippleui": "^1.12.1"
 	}
 }

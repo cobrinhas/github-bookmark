@@ -1,0 +1,86 @@
+name: Publish to GitHub
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    env:
+      release-asset-name: dist.zip
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up npm
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: 'npm'
+
+      - name: Install npm
+        run: npm install --frozen-lockfile
+
+      - name: Create Release Pull Request or Publish
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: npm run publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Zip dist folder
+        id: zip-folder
+        if: steps.changesets.outputs.published == 'true'
+        uses: vimtor/action-zip@v1
+        with:
+          files: dist
+          dest: ${{ env.release-asset-name }}
+
+      - name: Upload Release Asset
+        if: steps.zip-folder.outcome == 'success'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+
+            async function getReleaseId() {
+              try {
+                const response = await github.rest.repos.getLatestRelease({
+                  owner: '${{ github.repository_owner }}',
+                  repo: '${{ github.event.repository.name }}'
+                });
+
+                console.log(`Id of the latest release is ${response.data.id} was found.`);
+                return response.data.id
+              } catch (error) {
+                console.error('Failed to get Id of the latest release', error);
+                throw error;
+              }
+            }
+
+            async function uploadReleaseAsset(release_id) {
+
+              try {
+                const response = await github.rest.repos.uploadReleaseAsset({
+                  owner: '${{ github.repository_owner }}',
+                  repo: '${{ github.event.repository.name }}',
+                  release_id: release_id,
+                  name: '${{ env.release-asset-name }}',
+                  data: await fs.readFileSync('${{ github.workspace }}/${{ env.release-asset-name }}')
+                });
+
+                console.log(`Uploaded asset to release ${release_id}.`);
+              } catch (error) {
+                console.error(`Failed to upload asset to release ${release_id}`, error);
+                throw error;
+              }
+            }
+
+            let release_id = await getReleaseId();
+            console.log(`Release id: ${release_id}`)
+            await uploadReleaseAsset(release_id);
